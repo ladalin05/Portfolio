@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { User, Sun, Moon, Menu, X } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useTranslation } from 'react-i18next';
 
 
 const Navigation = () => {
@@ -18,7 +16,7 @@ const Navigation = () => {
     }, []);
 
     const [darkMode, setDarkMode] = useState(
-        () => localStorage.getItem('theme') === 'dark' ?? window.matchMedia('(prefers-color-scheme: dark)').matches
+        () => localStorage.getItem('theme') !== null ? localStorage.getItem('theme') === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
     );
 
     useEffect(() => {

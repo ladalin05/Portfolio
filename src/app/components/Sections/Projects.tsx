@@ -1,5 +1,14 @@
 
-export const Projects = ({ projects }) => {
+interface Project  {
+  title: string;
+  category: string;
+  subcategory?: string;
+  desc: string;
+  tags: string[];
+  featured?: boolean;
+}
+
+export const Projects = ({ projects }: { projects: Project[]}) => {
 
     const [featured, ...rest] = projects
 
