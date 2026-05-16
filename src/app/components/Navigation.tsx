@@ -58,9 +58,9 @@ const Navigation = () => {
                         className="h-10 w-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-400 transition-colors">
                         {
                             darkMode ? (
-                                <Moon className="w-6 h-6 text-foreground" />
+                                <Sun className="w-6 h-6 text-foreground text-amber-300" />
                             ) : (
-                                <Sun className="w-6 h-6 text-foreground" />
+                                <Moon className="w-6 h-6 text-foreground" />
                             )
                         }
                     </button>
