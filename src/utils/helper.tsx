@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const useObserver = (id, delay = 0) => {
+export const useObserver = (id: string, delay = 0) => {
   const [animated, setAnimated] = useState(false)
 
   useEffect(() => {
