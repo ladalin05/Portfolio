@@ -1,4 +1,7 @@
+import { useObserver } from "../../../utils/helper"
+
 export const Experience = () => {
+    const animated = useObserver("experience", 400)
 
     const experience = [
         { role: 'Freelance Web Developer', company: 'Self-employed · Remote', period: '2026 – Present', desc: 'Built responsive marketing sites and internal tools independently for clients. Specialised in Vue.js frontends backed by Laravel REST APIs, delivering fast, maintainable projects on tight schedules.', tech: ['Nuxt.js', 'React.js', 'Tailwind CSS','Laravel','MySQL'] },
@@ -21,7 +24,7 @@ export const Experience = () => {
             
             <div className="max-w-7xl mx-auto px-8 relative z-10">
                 <div className="flex items-center gap-6 mb-24">
-                    <div className="flex flex-col">
+                    <div className={`flex flex-col ${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} transition-all duration-500`}>
                         <h2 className="text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Experience<span className="text-blue-600 dark:text-blue-500">.</span></h2>
                     </div>
                 </div>
@@ -31,7 +34,7 @@ export const Experience = () => {
                             <div className="absolute left-0 top-2 bottom-0 w-[1px] bg-gradient-to-b from-blue-600 via-blue-200 dark:via-blue-500/20 to-transparent"></div>
                             {
                                 experience.map((job, index) => (
-                                    <div key={index} className="relative pl-10 group">
+                                    <div key={index} className={`relative pl-10 group ${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} transition-all duration-500`}>
                                         {/* FIX: dot is now a standalone sibling, not wrapping the card */}
                                         <div className={`absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full border-2 border-slate-50 dark:border-slate-950 transition-all duration-500 group-hover:scale-150 group-hover:shadow-[0_0_15px_rgba(37,99,235,0.8)] ${index === 0 ? 'bg-blue-600 dark:bg-blue-500' : 'bg-slate-300 dark:bg-slate-700'}`}></div>
                                         <div className="p-8 rounded-[24px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-xl shadow-sm transition-all duration-300 group-hover:border-blue-500/30 group-hover:shadow-xl group-hover:shadow-blue-500/5 dark:group-hover:bg-slate-900/60">
@@ -61,7 +64,7 @@ export const Experience = () => {
                         </div>
                     </div>
                     <div className="lg:col-span-5 space-y-16">
-                        <div>
+                        <div className={`${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} transition-all duration-500`}>
                             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                                 <span className="w-8 h-[2px] bg-blue-600 dark:bg-blue-500"></span>
                                 Education
@@ -86,7 +89,7 @@ export const Experience = () => {
                             </div>
                         </div>
 
-                        <div>
+                        <div className={`${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} transition-all duration-500`}>
                             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                                 <span className="w-8 h-[2px] bg-blue-600 dark:bg-blue-500"></span>
                                 Expertise

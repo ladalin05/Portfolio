@@ -1,4 +1,4 @@
-
+import { useObserver } from "../../../utils/helper"
 interface Project  {
   title: string;
   category: string;
@@ -9,6 +9,7 @@ interface Project  {
 }
 
 export const Projects = ({ projects }: { projects: Project[]}) => {
+    const animated = useObserver("projects", 400)
 
     const [featured, ...rest] = projects
 
@@ -17,7 +18,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
             <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
             <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="max-w-7xl mx-auto px-8 relative z-10">
-                <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-20">
+                <div className={`flex flex-col md:flex-row md:items-end md:justify-between mb-20 transition-all duration-1000 ease-out ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <div className="reveal">
                         <h2 className="text-5xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white">
                             Work &<em className="text-transparent italic bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-500"> Projects.</em>
@@ -34,7 +35,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                 </div>
 
                 <div className="space-y-8">
-                    <div className="group relative rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.2)]">
+                    <div className={`group relative rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.2)] ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                         <div className="grid lg:grid-cols-12">
                             <div className="lg:col-span-5 relative h-72 lg:h-auto overflow-hidden bg-slate-100 dark:bg-slate-900 transition-colors">
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 dark:from-blue-600/20 to-transparent z-10"></div>
@@ -81,7 +82,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                     {/* ── Rest as grid (index 1+) ── */}
                     <div className="grid md:grid-cols-3 gap-6">
                         {rest.map((project, index) => (
-                            <div key={index} className="group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60">
+                            <div key={index} className={`group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                                 <div className="flex justify-between items-start mb-10">
                                     <div className="text-4xl font-black text-slate-200 dark:text-blue-500/10 group-hover:text-blue-600/10 dark:group-hover:text-blue-500/20 transition-colors duration-500 font-display select-none">
                                         {String(index + 2).padStart(2, '0')}

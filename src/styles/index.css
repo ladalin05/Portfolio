@@ -28,15 +28,16 @@ body {
   animation: scan 4s linear infinite;
 }
 
-
 .text-gradient {
   background: linear-gradient(to right, #2563eb, #60a5fa);
 }
+
 @media (prefers-color-scheme: dark) {
   .text-gradient {
     background: linear-gradient(to right, #60a5fa, #bfdbfe);
   }
 }
+
 .text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
