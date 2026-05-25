@@ -5,7 +5,7 @@ export const Experience = () => {
 
     const experience = [
         { role: 'Freelance Web Developer', company: 'Self-employed · Remote', period: '2026 – Present', desc: 'Built responsive marketing sites and internal tools independently for clients. Specialised in Vue.js frontends backed by Laravel REST APIs, delivering fast, maintainable projects on tight schedules.', tech: ['Nuxt.js', 'React.js', 'Tailwind CSS','Laravel','MySQL'] },
-        { role: 'Junior Web Developer', company: 'WINTECH SOFTWARE DEVELOPMENT (Cambodia) Co., Ltd', period: '2024 – 2025', desc: 'Started career building responsive marketing sites and internal tools. Fell in love with Vue.js and never looked back.', tech: ['Laravel','MySQL'] },
+        { role: 'Web Development Intern', company: 'WINTECH SOFTWARE DEVELOPMENT (Cambodia) Co., Ltd', period: '2024 – 2025', desc: 'Started career building responsive marketing sites and internal tools. Fell in love with Vue.js and never looked back.', tech: ['Laravel','MySQL'] },
     ]
     const education = [
         { degree: 'SoftWare Engineering', school: 'BELTEI International University', year: '2023 – 2026' },

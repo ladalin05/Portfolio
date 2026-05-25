@@ -65,7 +65,7 @@ export const About = () => {
                             }
                         </div>
                         <div className={`flex items-center gap-8 ${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} transition-all duration-500`}>
-                            <a href="#" className={`group relative inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-mono text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-blue-700 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] dark:hover:bg-blue-500 ${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} transition-all duration-500`}>
+                            <a href="/LA-DALIN.pdf" download className={`group relative inline-flex items-center gap-3 rounded-full bg-blue-600 px-8 py-4 font-mono text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-blue-700 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] dark:hover:bg-blue-500 ${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} transition-all duration-500`}>
                                 <svg className="h-4 w-4 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                                 </svg>
