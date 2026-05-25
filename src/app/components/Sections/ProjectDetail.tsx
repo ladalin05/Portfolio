@@ -12,7 +12,7 @@ interface Project {
   title: string;
   category: string;
   subcategory?: string;
-  overview: string;
+  overview?: string;
   desc: string;
   role: string;
   year: string;
