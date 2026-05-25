@@ -8,6 +8,7 @@ import SkillsPage from './pages/Skills';
 import ProjectsPage from './pages/Projects';
 import ExperiencePage from './pages/Experience';
 import ContactPage from './pages/Contact';
+import ProjectDetailPage from './pages/ProjectDetail';
 
 function App() {
   const { i18n } = useTranslation();
@@ -23,7 +24,8 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} /> 
           <Route path='/skills' element={<SkillsPage />} /> 
-          <Route path='/projects' element={<ProjectsPage />} /> 
+          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/projects/:id' element={<ProjectDetailPage />} />
           <Route path='/experience' element={<ExperiencePage />} /> 
           <Route path='/contact' element={<ContactPage />} /> 
         </Route>

@@ -1,17 +1,24 @@
+import { useNavigate } from "react-router-dom";
 import { useObserver } from "../../../utils/helper"
 interface Project  {
+  id: number;
   title: string;
   category: string;
   subcategory?: string;
   desc: string;
-  tags: string[];
+  techs: string[];
   featured?: boolean;
 }
 
 export const Projects = ({ projects }: { projects: Project[]}) => {
     const animated = useObserver("projects", 400)
+    const navigation = useNavigate();
 
     const [featured, ...rest] = projects
+
+    const toProjectDetail = (id: number) => {
+        navigation(`/projects/${id}`);
+    }
 
     return (
         <section id="projects" className="relative overflow-hidden py-22 transition-colors duration-700 bg-slate-50 dark:bg-slate-950">
@@ -36,7 +43,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
 
                 <div className="space-y-8">
                     <div className={`group relative rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.2)] ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                        <div className="grid lg:grid-cols-12">
+                        <div className="grid lg:grid-cols-12" onClick={() => toProjectDetail(featured.id)}>
                             <div className="lg:col-span-5 relative h-72 lg:h-auto overflow-hidden bg-slate-100 dark:bg-slate-900 transition-colors">
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 dark:from-blue-600/20 to-transparent z-10"></div>
                                 <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-30 dark:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-700">
@@ -60,20 +67,19 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                                     {featured.desc}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-10">
-                                    {featured.tags.map((tech, index) => (
+                                    {featured.techs.map((tech, index) => (
                                         <span key={index} className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/5 text-[11px] font-mono uppercase tracking-wider group-hover:border-blue-500/20 dark:group-hover:text-blue-200 transition-all">
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
                                 <div className="flex items-center gap-8">
-                                    <a href="#" className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all group/link">
-                                        View Live Demo
+                                    <a href="https://github.com/ladalin05" className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all group/link">
+                                        Source Code
                                         <svg className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </a>
-                                    <a href="#" className="text-xs font-mono tracking-widest uppercase text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">Source Code</a>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +88,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                     {/* ── Rest as grid (index 1+) ── */}
                     <div className="grid md:grid-cols-3 gap-6">
                         {rest.map((project, index) => (
-                            <div key={index} className={`group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                            <div key={index} onClick={() => toProjectDetail(project.id)} className={`group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                                 <div className="flex justify-between items-start mb-10">
                                     <div className="text-4xl font-black text-slate-200 dark:text-blue-500/10 group-hover:text-blue-600/10 dark:group-hover:text-blue-500/20 transition-colors duration-500 font-display select-none">
                                         {String(index + 2).padStart(2, '0')}
@@ -99,7 +105,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                                     <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-light">{project.desc}</p>
                                 </div>
                                 <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
-                                    {project.tags.map((tag, idx) => (
+                                    {project.techs.map((tag, idx) => (
                                         <span key={idx} className="text-[9px] font-mono uppercase tracking-tighter px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-950 text-slate-500 dark:text-slate-500 border border-slate-200 dark:border-white/5 group-hover:text-blue-600 dark:group-hover:text-blue-300 group-hover:border-blue-500/20 transition-colors">
                                             {tag}
                                         </span>

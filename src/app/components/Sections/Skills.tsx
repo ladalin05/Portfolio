@@ -41,7 +41,7 @@ export const Skills = () => {
                 <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                     {
                         skills.map((skill, index) => (
-                            <div className={`group relative p-8 md:p-10 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-blue-500/[0.03] backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-blue-500/40 dark:hover:border-blue-500/20 hover:shadow-xl hover:shadow-blue-500/5 dark:hover:bg-blue-500/[0.06]  ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                            <div key={index} className={`group relative p-8 md:p-10 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-blue-500/[0.03] backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-blue-500/40 dark:hover:border-blue-500/20 hover:shadow-xl hover:shadow-blue-500/5 dark:hover:bg-blue-500/[0.06]  ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                                 <div className="absolute -top-12 -right-12 w-24 h-24 bg-blue-500/5 dark:bg-blue-500/10 blur-3xl rounded-full group-hover:bg-blue-500/20 transition-colors"></div>
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-4 mb-6">
