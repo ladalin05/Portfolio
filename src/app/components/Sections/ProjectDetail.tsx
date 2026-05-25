@@ -16,7 +16,7 @@ interface Project {
   desc: string;
   role: string;
   year: string;
-  gitUrl: GitUrl;
+  gitUrl: GitUrl[];
   highlights: string[];
   techs: string[];
   imgs: string[];
