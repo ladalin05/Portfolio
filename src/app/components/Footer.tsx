@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa'
 const Footer = () => {
     return (
         <footer className="bg-gray-50 pt-12 pb-8 dark:text-gray-300 dark:bg-slate-950/95 border-t border-[#2a2a32]">
@@ -10,6 +10,20 @@ const Footer = () => {
                         Ladalin.Dev
                     </span>
                 </Link>
+            </div>
+            <div className="flex gap-2">
+                <a href="https://github.com/ladalin05" target="_blank" 
+                    className="w-9 h-9 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/55 hover:bg-white/10 hover:text-white transition">
+                    <FaGithub size={16} />
+                </a>
+                <a href="https://www.linkedin.com/in/la-dalin-b88829393" target="_blank" rel="noreferrer"
+                    className="w-9 h-9 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/55 hover:bg-white/10 hover:text-white transition">
+                    <FaLinkedin size={16} />
+                </a>
+                <a href="https://t.me/Dalin1534" target="_blank" rel="noreferrer"
+                    className="w-9 h-9 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/55 hover:bg-white/10 hover:text-white transition">
+                    <FaTelegram size={16} />
+                </a>
             </div>
             <p className="text-smoke text-xs font-mono tracking-wide text-center">
                 © {new Date().getFullYear()} Portfolio. Designed &amp; built with React + Tailwind CSS.

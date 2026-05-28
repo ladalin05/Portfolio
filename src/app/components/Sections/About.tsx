@@ -1,6 +1,7 @@
 import { Image } from "../General"
 import profile from '../../../assets/profile-image.jpg'
 import { useObserver } from "../../../utils/helper"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export const About = () => {
     const animated = useObserver("about", 400)
@@ -48,10 +49,10 @@ export const About = () => {
                         
                         <div className="mb-12 space-y-6 text-lg font-light leading-relaxed text-slate-600 dark:text-slate-400">
                             <p>
-                            I am a <span className="text-slate-900 font-medium dark:text-white">Full-Stack Developer</span> dedicated to bridging the gap between complex backend logic and intuitive frontend aesthetics. Based in Phnom Penh, I build digital products that prioritize performance and user experience.
+                                I am a <span className="text-slate-900 font-medium dark:text-white">Full-Stack Developer</span> who thrives at the intersection of robust backend architecture and refined frontend experience. Based in Phnom Penh, I craft digital products that are fast, purposeful, and built to last.
                             </p>
                             <p>
-                            My toolkit is centered around modern ecosystems like <span className="text-blue-600 dark:text-blue-400">Laravel</span>, <span className="text-blue-600 dark:text-blue-400">Vue.js</span>, and <span className="text-blue-600 dark:text-blue-400">React</span>.
+                                My work lives inside modern ecosystems like <span className="text-blue-600 dark:text-blue-400">Laravel</span>, <span className="text-blue-600 dark:text-blue-400">Vue.js</span>, and <span className="text-blue-600 dark:text-blue-400">React</span> where I turn complex problems into clean, scalable solutions.
                             </p>
                         </div>
                         <div className="mb-12 grid grid-cols-2 gap-4">
@@ -71,7 +72,6 @@ export const About = () => {
                                 </svg>
                                 Download CV
                             </a>
-                            
                             <div className="flex items-center gap-3">
                                 <span className="relative flex h-3 w-3">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -79,6 +79,16 @@ export const About = () => {
                                 </span>
                                 <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Available for Hire</span>
                             </div>
+                            <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer"
+                                className="w-10 h-10 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition">
+                                <FaGithub size={16} />
+                            </a>
+
+                            <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noreferrer"
+                                className="w-10 h-10 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition">
+                                <FaLinkedin size={16} />
+                            </a>
+                            
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,22 @@ export const Experience = () => {
     const animated = useObserver("experience", 400)
 
     const experience = [
-        { role: 'Freelance Web Developer', company: 'Self-employed · Remote', period: '2026 – Present', desc: 'Built responsive marketing sites and internal tools independently for clients. Specialised in Vue.js frontends backed by Laravel REST APIs, delivering fast, maintainable projects on tight schedules.', tech: ['Nuxt.js', 'React.js', 'Tailwind CSS','Laravel','MySQL'] },
-        { role: 'Web Development Intern', company: 'WINTECH SOFTWARE DEVELOPMENT (Cambodia) Co., Ltd', period: '2024 – 2025', desc: 'Started career building responsive marketing sites and internal tools. Fell in love with Vue.js and never looked back.', tech: ['Laravel','MySQL'] },
+        {
+            role: 'Freelance Full-Stack Developer',
+            company: 'Self-employed · Remote',
+            period: '2026 – Present',
+            type: 'Freelance',
+            desc: 'Independently architect and deliver full-stack web applications for clients across various industries. Design scalable backend systems with Laravel REST APIs and craft performant, responsive frontends using Nuxt.js and React.js. Manage the full project lifecycle from requirement gathering to deployment.',
+            tech: ['Nuxt.js', 'React.js', 'Tailwind CSS', 'Laravel', 'MySQL'],
+        },
+        {
+            role: 'Web Development Intern',
+            company: 'WINTECH SOFTWARE DEVELOPMENT (Cambodia) Co., Ltd',
+            period: '2024 – 2025',
+            type: 'Internship',
+            desc: 'Contributed to real-world software projects under senior developer mentorship. Built and maintained internal tools and client-facing web applications using Laravel and MySQL. Gained hands-on experience with MVC architecture, database design, and agile team workflows.',
+            tech: ['Laravel', 'MySQL', 'PHP', 'JavaScript'],
+        },
     ]
     const education = [
         { degree: 'SoftWare Engineering', school: 'BELTEI International University', year: '2023 – 2026' },

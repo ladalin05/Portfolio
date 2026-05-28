@@ -8,7 +8,7 @@ export  const Hero = () => {
 
     const stats = [
         { value: '1+', label: 'Year Exp' }, 
-        { value: '5+', label: 'Projects' }, 
+        { value: '4+', label: 'Projects' }, 
         { value: '17+', label: 'Tech Stack' }
     ]
 

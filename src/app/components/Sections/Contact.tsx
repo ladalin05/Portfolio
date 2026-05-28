@@ -65,10 +65,10 @@ export const Contact = () => {
                 <div className="grid lg:grid-cols-12 gap-12">
                     <div className={`lg:col-span-5 space-y-8 transition-all duration-500 ${animated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
                         <div className="p-8 rounded-3xl border border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-white/[0.01] backdrop-blur-sm">
-                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Let's build the future.</h3>
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Let's build something great.</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-light italic">
-                                Available for full-stack architecture, UI/UX consulting, and creative engineering.{' '}
-                                <span className="text-blue-600 dark:text-blue-400 font-semibold">Currently accepting new inquiries.</span>
+                                Open to full-stack development, performance optimization, and product consulting.{' '}
+                                <span className="text-blue-600 dark:text-blue-400 font-semibold">Ready to bring your next idea to life.</span>
                             </p>
                         </div>
                         <div className="grid gap-4">

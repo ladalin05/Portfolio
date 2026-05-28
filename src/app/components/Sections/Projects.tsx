@@ -31,7 +31,7 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                             Work &<em className="text-transparent italic bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-500"> Projects.</em>
                         </h2>
                     </div>
-                    <a href="#" className="group flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all mt-8 md:mt-0">
+                    <a href="projects" className="group flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all mt-8 md:mt-0">
                         Explore Archive
                         <div className="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 group-hover:border-blue-500/50 group-hover:bg-blue-500/10 transition-all shadow-sm">
                             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,11 +93,11 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                                     <div className="text-4xl font-black text-slate-200 dark:text-blue-500/10 group-hover:text-blue-600/10 dark:group-hover:text-blue-500/20 transition-colors duration-500 font-display select-none">
                                         {String(index + 2).padStart(2, '0')}
                                     </div>
-                                    <div className="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-100 dark:border-white/5 group-hover:border-blue-500/30 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-400 transition-all duration-300">
+                                    <a href="https://github.com/ladalin05" className="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-100 dark:border-white/5 group-hover:border-blue-500/30 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-400 transition-all duration-300">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div className="mb-8">
                                     <span className="text-[10px] font-mono font-bold tracking-[0.3em] uppercase text-blue-600 dark:text-blue-500/60 mb-2 block">{project.category}</span>
