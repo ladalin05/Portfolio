@@ -74,12 +74,13 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                                     ))}
                                 </div>
                                 <div className="flex items-center gap-8">
-                                    <a href="https://github.com/ladalin05" className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all group/link">
-                                        Source Code
+                                    <a href="https://bird2d.com" className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all group/link">
+                                        View Live Demo
                                         <svg className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </a>
+                                    <a href="https://github.com/ladalin05" className="text-xs font-mono tracking-widest uppercase text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">Source Code</a>
                                 </div>
                             </div>
                         </div>
@@ -88,16 +89,16 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                     {/* ── Rest as grid (index 1+) ── */}
                     <div className="grid md:grid-cols-3 gap-6">
                         {rest.map((project, index) => (
-                            <div key={index} onClick={() => toProjectDetail(project.id)} className={`group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                            <div key={index} className={`group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                                 <div className="flex justify-between items-start mb-10">
                                     <div className="text-4xl font-black text-slate-200 dark:text-blue-500/10 group-hover:text-blue-600/10 dark:group-hover:text-blue-500/20 transition-colors duration-500 font-display select-none">
                                         {String(index + 2).padStart(2, '0')}
                                     </div>
-                                    <a href="https://github.com/ladalin05" className="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-100 dark:border-white/5 group-hover:border-blue-500/30 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-400 transition-all duration-300">
+                                    <button onClick={() => toProjectDetail(project.id)}  className="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-100 dark:border-white/5 group-hover:border-blue-500/30 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-400 transition-all duration-300">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
                                 <div className="mb-8">
                                     <span className="text-[10px] font-mono font-bold tracking-[0.3em] uppercase text-blue-600 dark:text-blue-500/60 mb-2 block">{project.category}</span>

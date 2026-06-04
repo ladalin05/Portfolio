@@ -16,8 +16,45 @@ import REDashboard from "../assets/images/real-estate/dashboard.png"
 
 
 export const projects = [
+
   {
     id: 1,
+    title: 'D2D Laundry',
+    category: 'Full-Stack App',
+    subcategory: 'Door-to-door laundry platform',
+    desc: 'A full-stack door-to-door laundry platform with a customer-facing site, admin dashboard, driver portal, and REST API backend enabling end-to-end order management from pickup scheduling to delivery.',
+    overview: `D2D Laundry is a full-stack, multi-interface laundry platform built to digitize and automate the entire door-to-door laundry workflow. The system is composed of four connected layers a public-facing website, an admin dashboard, a driver portal, and a REST API backend each serving a distinct role in the operation.
+      Customers interact with the public website to browse services, view transparent pricing tiers (Wash & Fold at $1.55/kg, Wash & Iron at $2.50/kg), and place laundry pickup requests. Once an order is submitted, they can track its real-time status as it moves through pickup, cleaning, and delivery stages no phone calls required.
+      The admin dashboard is the operational command center. Staff can manage the full order lifecycle, monitor active customers and drivers, configure laundry services and pricing, set driver zones and time slots, handle payments, and view performance metrics like total revenue, payment rate, and average order value all from a single interface.
+      Drivers get their own dedicated portal a focused, mobile-friendly interface that shows their daily pickup schedule, active orders with customer details, earnings for the day, and a full order history. Status updates made by drivers are reflected instantly across the system, keeping customers and admins in sync without manual coordination.
+      The backend is a REST API built with Node.js and MySQL, powering all three frontends. It handles authentication, order state management, driver assignment, payment tracking, and CMS content making the platform modular, scalable, and easy to extend as the business grows.`,
+    highlights: [
+      'Architected a multi-interface full-stack system: public site, admin dashboard, driver portal, and REST API',
+      'Implemented real-time order tracking across pickup, cleaning, and delivery stages',
+      'Built admin dashboard with full order, customer, driver, payment, and CMS management',
+      'Developed a dedicated driver portal with daily schedule, active orders, and earnings tracking',
+      'Designed pricing engine supporting multiple service tiers, delivery fees, and express surcharges',
+      'Integrated REST APIs connecting all three frontends to a shared Node.js and MySQL backend',
+    ],
+    role: 'Frontend & Backend Developer',
+    year: '2026',
+    techs: ['React', 'Nuxt', 'Node.js', 'MySQL', 'Tailwind CSS'],
+    gitUrl: [
+      { title: 'Website', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Website' },
+      { title: 'Admin Frontend', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Admin-Frontend' },
+      { title: 'Backend API', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Admin-Backend' },
+      { title: 'Driver Portal', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Delivery' },
+    ],
+    imgs: [
+      webSite,
+      adminDsh,
+      driverDsh,
+    ],
+    featured: false,
+  },
+
+  {
+    id: 2,
     title: 'DLPOS - POS Management System',
     category: 'Business Management',
     subcategory: 'Point of Sale System',
@@ -50,7 +87,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'Pureclean Laundry',
     category: 'Web App',
     subcategory: 'Laundry Loyalty Web App',
@@ -76,42 +113,6 @@ export const projects = [
       homeImage,
       loginImage,
       profileImage,
-    ],
-    featured: false,
-  },
-
-  {
-    id: 3,
-    title: 'D2D Laundry',
-    category: 'Full-Stack App',
-    subcategory: 'Door-to-door laundry platform',
-    desc: 'A full-stack door-to-door laundry platform with a customer-facing site, admin dashboard, driver portal, and REST API backend enabling end-to-end order management from pickup scheduling to delivery.',
-    overview: `D2D Laundry is a full-stack, multi-interface laundry platform built to digitize and automate the entire door-to-door laundry workflow. The system is composed of four connected layers a public-facing website, an admin dashboard, a driver portal, and a REST API backend each serving a distinct role in the operation.
-      Customers interact with the public website to browse services, view transparent pricing tiers (Wash & Fold at $1.55/kg, Wash & Iron at $2.50/kg), and place laundry pickup requests. Once an order is submitted, they can track its real-time status as it moves through pickup, cleaning, and delivery stages no phone calls required.
-      The admin dashboard is the operational command center. Staff can manage the full order lifecycle, monitor active customers and drivers, configure laundry services and pricing, set driver zones and time slots, handle payments, and view performance metrics like total revenue, payment rate, and average order value all from a single interface.
-      Drivers get their own dedicated portal a focused, mobile-friendly interface that shows their daily pickup schedule, active orders with customer details, earnings for the day, and a full order history. Status updates made by drivers are reflected instantly across the system, keeping customers and admins in sync without manual coordination.
-      The backend is a REST API built with Node.js and MySQL, powering all three frontends. It handles authentication, order state management, driver assignment, payment tracking, and CMS content making the platform modular, scalable, and easy to extend as the business grows.`,
-    highlights: [
-      'Architected a multi-interface full-stack system: public site, admin dashboard, driver portal, and REST API',
-      'Implemented real-time order tracking across pickup, cleaning, and delivery stages',
-      'Built admin dashboard with full order, customer, driver, payment, and CMS management',
-      'Developed a dedicated driver portal with daily schedule, active orders, and earnings tracking',
-      'Designed pricing engine supporting multiple service tiers, delivery fees, and express surcharges',
-      'Integrated REST APIs connecting all three frontends to a shared Node.js and MySQL backend',
-    ],
-    role: 'Frontend & Backend Developer',
-    year: '2026',
-    techs: ['React', 'Nuxt', 'Node.js', 'MySQL', 'Tailwind CSS'],
-    gitUrl: [
-      { title: 'Website', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Website' },
-      { title: 'Admin Frontend', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Admin-Frontend' },
-      { title: 'Backend API', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Admin-Backend' },
-      { title: 'Driver Portal', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Delivery' },
-    ],
-    imgs: [
-      webSite,
-      adminDsh,
-      driverDsh,
     ],
     featured: false,
   },
