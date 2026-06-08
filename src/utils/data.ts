@@ -2,10 +2,12 @@ import homeImage from "../assets/images/pureclean/home.png"
 import loginImage from "../assets/images/pureclean/login.png"
 import profileImage from "../assets/images/pureclean/profile.png"
 
+import mainImagePos from "../assets/images/pos-project/mainImage.png"
 import dashboardImage from "../assets/images/pos-project/dashboard.png"
 import loginPosImage from "../assets/images/pos-project/login.png"
 import PosImage from "../assets/images/pos-project/pos.png"
 
+import mainImaged2d from '../assets/images/d2d-laundry/d2d-laundry.png'
 import webSite from "../assets/images/d2d-laundry/website.png"
 import adminDsh from "../assets/images/d2d-laundry/adminDashboard.png"
 import driverDsh from "../assets/images/d2d-laundry/driver.png"
@@ -40,11 +42,12 @@ export const projects = [
     year: '2026',
     techs: ['React', 'Nuxt', 'Node.js', 'MySQL', 'Tailwind CSS'],
     gitUrl: [
-      { title: 'Website', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Website' },
-      { title: 'Admin Frontend', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Admin-Frontend' },
-      { title: 'Backend API', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Admin-Backend' },
-      { title: 'Driver Portal', url: 'https://github.com/mengly-uch-cadt/Bird-Laundry-Delivery' },
+      { title: 'Website', url: 'https://github.com/ladalin05/Bird-Laundry-Website' },
+      { title: 'Admin Frontend', url: 'https://github.com/ladalin05/Bird-Laundry-Admin-Frontend' },
+      { title: 'Backend API', url: 'https://github.com/ladalin05/Bird-Laundry-Admin-Backend' },
+      { title: 'Driver Portal', url: 'https://github.com/ladalin05/Bird-Laundry-Delivery' },
     ],
+    mainImage: mainImaged2d,
     imgs: [
       webSite,
       adminDsh,
@@ -78,6 +81,7 @@ export const projects = [
     gitUrl: [
       { title: 'POS System', url: 'https://github.com/ladalin05/POS-System' },
     ],
+    mainImage: mainImagePos,
     imgs: [
       dashboardImage,
       loginPosImage,
@@ -109,6 +113,7 @@ export const projects = [
     gitUrl: [
       { title: 'Web App', url: 'https://github.com/ladalin05/PureClean-UserLoyalty' },
     ],
+    mainImage: homeImage,
     imgs: [
       homeImage,
       loginImage,
@@ -145,6 +150,7 @@ export const projects = [
       { title: 'Frontend', url: 'https://github.com/ladalin05/RealEstate' },
       { title: 'Backend API', url: 'https://github.com/ladalin05/RealEstate-Backend' },
     ],
+    mainImage: REWebsite,
     imgs: [
       REDashboard,
       REWebsite,

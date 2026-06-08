@@ -7,6 +7,7 @@ interface Project  {
   subcategory?: string;
   desc: string;
   techs: string[];
+  mainImage?: string;
   featured?: boolean;
 }
 
@@ -45,9 +46,9 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                     <div className={`group relative rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.2)] ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                         <div className="grid lg:grid-cols-12" onClick={() => toProjectDetail(featured.id)}>
                             <div className="lg:col-span-5 relative h-72 lg:h-auto overflow-hidden bg-slate-100 dark:bg-slate-900 transition-colors">
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 dark:from-blue-600/20 to-transparent z-10"></div>
-                                <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-30 dark:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-700">
-                                    <span className="text-[14rem] font-black tracking-tighter text-blue-600 dark:text-blue-500 select-none">01</span>
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 dark:from-blue-600/20 to-transparent z-10 opacity-10 group-hover:opacity-30 dark:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-700"></div>
+                                <div className="absolute inset-0 flex items-center justify-center ">
+                                    <img src={featured.mainImage} alt={featured.title} className="w-5/6 h-auto" />
                                 </div>
                             </div>
                             <div className="lg:col-span-7 p-8 md:p-14 lg:p-16">
@@ -90,11 +91,11 @@ export const Projects = ({ projects }: { projects: Project[]}) => {
                     <div className="grid md:grid-cols-3 gap-6">
                         {rest.map((project, index) => (
                             <div key={index} className={`group relative p-8 rounded-[32px] border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl dark:hover:bg-slate-900/60 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                                <div className="flex justify-between items-start mb-10">
-                                    <div className="text-4xl font-black text-slate-200 dark:text-blue-500/10 group-hover:text-blue-600/10 dark:group-hover:text-blue-500/20 transition-colors duration-500 font-display select-none">
-                                        {String(index + 2).padStart(2, '0')}
+                                <div className="flex justify-center items-start mb-10">
+                                    <div className="w-full h-36 flex justify-center font-black text-slate-200 dark:text-blue-500/10 group-hover:text-blue-600/10 dark:group-hover:text-blue-500/20 transition-colors duration-500 font-display select-none">
+                                        <img src={project.mainImage}  alt={project.title} className="w-5/6 h-auto" />
                                     </div>
-                                    <button onClick={() => toProjectDetail(project.id)}  className="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-100 dark:border-white/5 group-hover:border-blue-500/30 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-400 transition-all duration-300">
+                                    <button onClick={() => toProjectDetail(project.id)}  className="absolute top-4 right-4 w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-950 flex items-center justify-center border border-slate-100 dark:border-white/5 group-hover:border-blue-500/30 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-400 transition-all duration-300">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
