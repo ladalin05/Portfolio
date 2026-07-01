@@ -4,15 +4,20 @@ export const Skills = () => {
     const animated = useObserver("skills", 400)
 
     const skills = [
-                { 
+        { 
+            name: 'Programming Foundations', 
+            description: 'Core languages for systems and application development.',
+            tools: ['C', 'C++'] 
+        },
+        { 
             name: 'Frontend Core', 
             description: 'Creating high-performance, reactive interfaces.',
-            tools: ['Vue 3', 'Nuxt.js', 'React', 'TypeScript', 'Tailwind CSS'] 
+            tools: ['Vue 3', 'Nuxt.js', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'] 
         },
         { 
             name: 'Backend & Systems', 
             description: 'Building robust APIs and server-side logic.',
-            tools: ['Laravel', 'Node.js', 'Express', 'RESTful APIs'] 
+            tools: ['Laravel', 'PHP', 'Node.js', 'Express', 'RESTful APIs'] 
         },
         { 
             name: 'Database & Storage', 
@@ -22,7 +27,7 @@ export const Skills = () => {
         { 
             name: 'Tools & DevOps', 
             description: 'Workflow optimization and deployment.',
-            tools: ['Docker', 'Git', 'GitHub Actions', 'Postman','Vite', 'Nginx'] 
+            tools: ['Docker', 'Git', 'GitHub Actions', 'Postman', 'Vite', 'Nginx'] 
         },
     ]
 
