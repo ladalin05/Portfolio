@@ -5,14 +5,6 @@ export const Experience = () => {
 
     const experience = [
         {
-            role: 'Freelance Full-Stack Developer',
-            company: 'Self-employed · Remote',
-            period: '2026 – Present',
-            type: 'Freelance',
-            desc: 'Independently architect and deliver full-stack web applications for clients across various industries. Design scalable backend systems with Laravel REST APIs and craft performant, responsive frontends using Nuxt.js and React.js. Manage the full project lifecycle from requirement gathering to deployment.',
-            tech: ['Nuxt.js', 'React.js', 'Tailwind CSS', 'Laravel', 'MySQL'],
-        },
-        {
             role: 'Web Development',
             company: 'WINTECH SOFTWARE DEVELOPMENT (Cambodia) Co., Ltd',
             period: '2024 – 2025',

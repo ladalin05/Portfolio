@@ -12,12 +12,12 @@ export const Skills = () => {
         { 
             name: 'Frontend Core', 
             description: 'Creating high-performance, reactive interfaces.',
-            tools: ['Vue 3', 'Nuxt.js', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'] 
+            tools: ['Vue 3', 'Nuxt.js', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap 5'] 
         },
         { 
             name: 'Backend & Systems', 
             description: 'Building robust APIs and server-side logic.',
-            tools: ['Laravel', 'PHP', 'Node.js', 'Express', 'RESTful APIs'] 
+            tools: ['Laravel', 'PHP', 'Node.js', 'RESTful APIs'] 
         },
         { 
             name: 'Database & Storage', 
@@ -27,7 +27,7 @@ export const Skills = () => {
         { 
             name: 'Tools & DevOps', 
             description: 'Workflow optimization and deployment.',
-            tools: ['Docker', 'Git', 'GitHub Actions', 'Postman', 'Vite', 'Nginx'] 
+            tools: ['Docker', 'Git', 'GitHub', 'Postman'] 
         },
     ]
 
