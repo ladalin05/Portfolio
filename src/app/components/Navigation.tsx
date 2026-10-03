@@ -29,8 +29,9 @@ const Navigation = () => {
         { path: '/about', label: 'About' },
         { path: '/skills', label: 'Skills' },
         { path: '/projects', label: 'Projects' },
+        { path: '/education', label: 'Education' },
         { path: '/contact', label: 'Contact' },
-    ];
+    ]
 
     return (
         <header className={`w-full fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out px-4 ${isScrolled ? 'py-3 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-lg border-b border-slate-200/50 dark:border-slate-800/50' : 'py-5 bg-transparent border-transparent'}`}>
