@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-export  const Hero = () => {
+export const Hero = () => {
     const navigator = useNavigate();
-    const [visible, setVisible ] = useState(false);
+    const [visible, setVisible] = useState(false);
 
     const stats = [
-        { value: '1+', label: 'Year Exp' }, 
-        { value: '4+', label: 'Projects' }, 
+        { value: '1+', label: 'Year Exp' },
+        { value: '4+', label: 'Projects' },
         { value: '17+', label: 'Tech Stack' }
     ]
 
