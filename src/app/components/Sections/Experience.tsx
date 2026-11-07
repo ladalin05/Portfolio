@@ -8,16 +8,16 @@ export const Experience = () => {
             role: 'Open to Junior & Internship Roles',
             company: 'Available for new opportunities',
             period: '2026 – Present',
-            type: 'Available',
+            // type: 'Available',
             isSeeking: true,
             desc: 'Software Engineering graduate with hands-on Laravel and MySQL experience from a professional internship. Looking for a junior developer position or internship where I can contribute to real projects, keep learning, and grow with a strong team.',
             tech: ['Laravel', 'React', 'MySQL', 'TypeScript'],
         },
         {
-            role: 'Web Development Intern',
+            role: 'Web Development',
             company: 'WINTECH SOFTWARE DEVELOPMENT (Cambodia) Co., Ltd',
             period: '2024 – 2025',
-            type: 'Internship',
+            // type: 'Internship',
             isSeeking: false,
             desc: 'Contributed to real-world software projects under senior developer mentorship. Built and maintained internal tools and client-facing web applications using Laravel and MySQL. Gained hands-on experience with MVC architecture, database design, and agile team workflows.',
             tech: ['Laravel', 'MySQL', 'PHP', 'JavaScript'],
@@ -75,9 +75,9 @@ export const Experience = () => {
                                                     <p className="text-blue-600 dark:text-blue-500 font-semibold tracking-wide mt-1 text-sm">{ experienceItem.company }</p>
                                                 </div>
                                                 <div className="flex items-center gap-2">
-                                                    <span className={`text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border ${experienceItem.isSeeking ? 'bg-green-50 dark:bg-green-500/10 text-green-700 dark:text-green-400 border-green-100 dark:border-green-500/20' : 'bg-slate-50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-white/5'}`}>
+                                                    {/* <span className={`text-[10px] font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border ${experienceItem.isSeeking ? 'bg-green-50 dark:bg-green-500/10 text-green-700 dark:text-green-400 border-green-100 dark:border-green-500/20' : 'bg-slate-50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-white/5'}`}>
                                                         { experienceItem.type }
-                                                    </span>
+                                                    </span> */}
                                                     <span className="text-[10px] font-mono py-1.5 px-3 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20 font-bold">
                                                         { experienceItem.period }
                                                     </span>
